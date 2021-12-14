@@ -150,8 +150,8 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    padding: 100px 766px 129px 100px;
-    margin-bottom: 87px;
+    padding: 100px 100px 120px;
+    margin-bottom: 80px;
 }
 .banner-title {
     font-weight: 900;
@@ -192,13 +192,14 @@ header {
     border-radius: 5px;
     padding: 18px 25px;
     border: 1px solid #FBB731;
+    transition: 0.3s;
 }
 .banner-link:hover {
     background-color: transparent;
     color: #FBB731;
 }
-.menu-select:hover {
-    cursor: pointer;
+.menu {
+    padding-top: 20px;
 }
 .menu-header {
     display: flex;
@@ -278,13 +279,14 @@ header {
     border: none;
     margin: 0 auto;
     gap: 9px;
+    transition: 0.2s;
 }
 .menu-grid-text a{
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
     color: #1E2F40;
-    text-decoration: none;
+    text-decoration: none;  
 }
 #dopolnitelno {
     margin-bottom: 140px;
@@ -354,6 +356,31 @@ header {
     padding-left: 0;
     list-style-type: none;
 }
+
+.button-up {
+    background-color: #FBB731;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #1E2F40;
+    text-decoration: none;
+    padding: 5px 20px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 5px;
+    transition: 1s;
+}
+.button-up:hover {
+    background-color: #F37335;
+}
+.button-up.hidden {
+    opacity: 0;
+}
+.button-up.visible {
+    opacity: 1;
+}
+
 /* STYLE INDEX */
 .main {
     background: linear-gradient(180deg, #0C4C7B -100%, #1E2F40 100%);
