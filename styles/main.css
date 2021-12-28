@@ -229,7 +229,7 @@ header {
     background-repeat: no-repeat;
     background-position: 89% center;
 }
-.menu-grid {
+.menu-grid, .menu-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 50px 20px;
@@ -303,13 +303,11 @@ header {
 .footer-box {
     display: flex;
     justify-content: space-between;
+    gap: 20px;
 }
 .footer-logo {
     width: 63px;
     height: 56px;
-}
-.footer-item {
-    flex: 0 0 auto;
 }
 .footer-item h2 {
     font-size: 20px;
@@ -317,6 +315,7 @@ header {
     text-transform: uppercase;
     margin-bottom: 19px;
     margin-top: 0;
+    line-height: 1.5;
 }
 .footer-list li {
     margin-bottom: 9px;
@@ -623,16 +622,15 @@ header {
     }
 }
 
-@media (max-width: 765px) {
-    nav {
-        display: none;
-    }
-    nav {
-        gap: 21px;
-    }
-}
-
 @media (max-width: 567px) {
+    .header {
+        padding-top: 19px;
+        padding-bottom: 19px;
+    }
+    .header-logo {
+        width: 116px;
+        height: 37px;
+    }
     .breadcrumbs a {
         font-size: 14px;
     }
@@ -643,12 +641,95 @@ header {
         font-size: 12px;
     }
     .bg {
+        margin-bottom: 33px;
         padding: 55px 0;
     }
     .banner-box {
         background-position: 17% center;
         padding: 35px 24px 54px;
+        margin-bottom: 40px;
     }
+    .menu-title {
+        font-size: 27px;
+    }
+    .menu-select {
+        font-size: 12px;
+        flex-basis: 136px;
+        padding: 13px 24px 13px 15px;
+        background-position: 91% center;
+    }
+    .menu-header {
+        margin-bottom: 30px;
+    }
+    .menu-grid {
+        gap: 25px 15px;
+        margin-bottom: 40px;
+    }
+    .menu-grid-cover {
+        height: 56vw;
+        margin-bottom: 10px;
+    }
+    .menu-grid-cover img {
+        height: 100%;
+    }
+    .menu-grid-title {
+        font-size: 15px;
+    }
+    .menu-grid-price {
+        font-size: 16px;
+        margin-top: 6px;
+        margin-bottom: 14px;
+    }
+    .menu-grid-btn {
+        padding: 10px 21px;
+    }
+    .menu-other {
+        height: 108vw;
+    }
+    .menu-other .menu-grid {
+        padding-bottom: 24vw;
+    }
+    .menu-other .menu-grid-cover, {
+        height: 56vw;
+    }
+    .menu-other .menu-grid-cover img {
+        height: 100%;
+    }
+    .menu-other .menu-grid-item {
+        flex: 0 0 38vw;
+    }
+    .footer {
+        margin-top: 28px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .footer-list + .footer-list-tel {
+        display: none;
+    }
+    .footer-tel {
+        display: block;
+    }
+    .footer-box {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        grid-template-areas: "logo tel" "link link" "info info";
+        gap: 0;
+    }
+    .footer-item:nth-child(1) {
+        grid-area: logo;
+    }
+    .footer-item:nth-child(2) {
+        grid-area: link;
+    }
+    .footer-item:nth-child(3) {
+        grid-area: info;
+    }
+    .footer-tel {
+        grid-area: tel;
+    }
+    .footer-tel .footer-list-tel {
+        display: block;
+  }
 }
 
 @media (max-width: 360px) {
@@ -657,10 +738,168 @@ header {
         height: 37px;
         background-size: contain;
     }
+    .menu-grid-title {
+        font-size: 13px;
+    }
 }
 
 @media (max-width: 320px) {
     .banner-box {
         background-position: 25% center;
     }
+    .menu-select {
+        flex-basis: 136px;
+        font-size: 12px;
+        padding: 7px 31px 7px 15px;
+    }
 }
+ /*media for INDEX file*/
+
+ @media ( max-width: 1000px) {
+     .main {
+         overflow: hidden;
+     }
+     .wrapper {
+         max-width: 891px;
+     }
+     .content {
+         flex: 0 0 500px;
+     }
+     .content-title {
+         font-size: 100px;
+     }
+     .visual-bg {
+         width: 300px;
+     }
+     .main img {
+         width: 600px;
+         right: -168px;
+         top: 100px;
+     }
+     .container {
+         max-width: 738px;
+     }
+ }
+ @media (max-width: 768px) {
+     .main {
+         overflow: hidden;
+     }
+     .wrapper {
+        max-width: 738px;
+    }
+    .content {
+        flex: 0 0 417px;
+        padding-top: 37px;
+        padding-bottom: 122px;
+        padding-left: 13px;
+    }
+    .content-title {
+        font-size: 86px;
+        line-height: 101px;
+        margin-bottom: 21px;
+        margin-top: 0;
+    }
+    .content-title span {
+        font-size: 22px;
+        margin-bottom: 4px;
+    }
+    .content-text {
+        font-size: 14px;
+        line-height: 140%;
+        margin-bottom: 34px;
+    }
+    .content-link, .promo a {
+        padding: 17px 39px;
+    }
+    .visual-bg {
+        width: 198px;
+    }
+    .main img {
+        width: 477px;
+        right: -123px;
+        top: 122px;
+    }
+    .promo {
+        padding-top: 107px;
+        padding-bottom: 46px;
+    }
+    .promo-left {
+        padding: 48px 31px;
+    }
+    .promo-right {
+        padding: 54px 29px;
+    }
+    .free {
+        margin-top: 8px;
+        margin-bottom: 19px;
+    }
+    .promo-right .promo-description {
+        margin-bottom: 12px;
+    }
+    .content-link, .promo a {
+        padding: 17px 39px;
+    }
+    .footer {
+        margin-top: 98px;
+    }
+    .footer .container {
+        padding-right: 0;
+    }
+ }
+ @media (max-width: 567px) {
+    .wrapper {
+        max-width: 540px;
+        gap: 5px;
+    }
+    .content {
+        flex: 0 0 300px;
+    }
+    .content-title {
+        font-size: 66px;
+    }
+    .visual-bg {
+        width: 140px;
+    }
+    .main img {
+        width: 400px;
+        right: -148px;
+        top: 122px;
+    }
+    .promo {
+        padding-top: 71px;
+        padding-bottom: 24px;
+    }
+    .footer {
+        margin-top: 28px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .footer-box {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        grid-template-areas:
+            "logo tel"
+            "link link"
+            "info info";
+        gap: 0;
+    }
+    .footer-item:nth-child(1) {
+        grid-area: logo;
+    }
+    .footer-item:nth-child(2) {
+        grid-area: link;
+    }
+    .footer-item:nth-child(3) {
+        grid-area: info;
+    }
+    .footer-tel {
+        grid-area: tel;
+        text-align: right;
+    }
+ }
+ @media (max-width: 320px) {
+    .footer {
+        margin-top: 60px;
+        padding-bottom: 45px;
+    }
+ }
