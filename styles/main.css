@@ -567,7 +567,7 @@ header {
     }
 }
 @media (max-width: 765px) {
-    .header-nav {
+    nav {
         display: none;
     }
 }
